@@ -10,6 +10,9 @@ image = dataset["test"]["image"][0]
 image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 model = ViTForImageClassification.from_pretrained("google/vit-base-patch16-224")
 
+print(image_processor)
+
+
 inputs = image_processor(image, return_tensors="pt")
 
 with torch.no_grad():
